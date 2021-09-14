@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Perfil">
+                    android:text="Visitador">
                 </TextView>
 
                 <TextView

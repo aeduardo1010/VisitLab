@@ -1,20 +1,14 @@
-package com.example.visitlab.perfil;
+package com.example.visitlab.ConsultaVisitador;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.os.Bundle;
 import com.example.visitlab.R;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.os.Bundle;
 import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
