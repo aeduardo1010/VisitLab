@@ -17,17 +17,7 @@
         android:textStyle="bold"
         android:orientation="vertical"
         android:gravity="center"/>
-    <EditText
-        android:id="@+id/txtCodigo"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:hint="Ingrese codigo de visitador"
-        android:gravity="center"
-        android:inputType="phone"
-        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/txtDNI"
@@ -90,5 +80,5 @@
         android:layout_height="wrap_content"
         android:text="Guardar"
         android:padding="12dp"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 </LinearLayout>

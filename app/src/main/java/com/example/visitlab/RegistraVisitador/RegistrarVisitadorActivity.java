@@ -31,7 +31,7 @@ public class RegistrarVisitadorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_visitador);
 
-        edtCodigo=(EditText)findViewById(R.id.txtCodigo);
+        //edtCodigo=(EditText)findViewById(R.id.txtCodigo);
         edtDNI=(EditText)findViewById(R.id.txtDNI);
         edtApellido=(EditText)findViewById(R.id.txtApellido);
         edtNombre=(EditText)findViewById(R.id.txtNombre);
@@ -42,7 +42,7 @@ public class RegistrarVisitadorActivity extends AppCompatActivity {
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ejecutarServicio("http://192.168.1.18:8080/visitlabperu/insertar_visitador.php");
+                ejecutarServicio("http://192.168.1.11:8080/visitlabperu/insertar_visitador.php");
             }
         });
 
@@ -67,12 +67,15 @@ public class RegistrarVisitadorActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError{
                 Map<String, String> parametros=new HashMap<String, String>();
-                parametros.put("vm_id_visitador",edtCodigo.getText().toString());
+                parametros.put("vm_id_visitador"," ");
                 parametros.put("vm_dni",edtDNI.getText().toString());
                 parametros.put("vm_apellido",edtApellido.getText().toString());
                 parametros.put("vm_nombre",edtNombre.getText().toString());
                 parametros.put("vm_password",edtPassword.getText().toString());
                 parametros.put("vm_email",edtEmail.getText().toString());
+                parametros.put("vm_photo"," ");
+                parametros.put("vm_citas_hechas","0");
+                parametros.put("vm_citas_totales","0");
 
                 return parametros;
             }

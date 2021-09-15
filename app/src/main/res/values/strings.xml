@@ -30,4 +30,5 @@
     <string name="menu_calendariocitas_corto">Calendario</string>
     <string name="menu_medicamentosugerido">Medicamentos Sugeridos</string>
     <string name="menu_medicamentosugerido_corto">Medicamentos</string>
+    <string name="URL_Usuarios">http://192.168.1.11:8080/visitlabperu/consultar_visitador.php</string>
 </resources>
