@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ConsultaVisitador.PerfilActivity">
+    tools:context=".ConsultaVisitador.VisitadorActivity">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/etBuscador"
+        android:id="@+id/txtBuscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconifiedByDefault="false"
-        app:queryHint="Buscar nombre"
+        app:queryHint="Buscar por apellido"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLista"
+        android:id="@+id/listaVisitadores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBuscador" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBuscar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

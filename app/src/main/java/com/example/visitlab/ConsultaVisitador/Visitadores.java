@@ -1,9 +1,9 @@
 package com.example.visitlab.ConsultaVisitador;
 
-public class Players {
+public class Visitadores {
 
 
-    public Players(int id_codigo, int dni, String apellido, String nombre, String email, String photo, int citas_hechas, int citas_totales) {
+    public Visitadores(int id_codigo, int dni, String apellido, String nombre, String email, String photo, int citas_hechas, int citas_totales) {
         this.id_codigo = id_codigo;
         this.dni = dni;
         this.apellido = apellido;

@@ -10,7 +10,6 @@ import android.view.View;
 import com.example.visitlab.MenuVisitador.MenuVisitadorActivity;
 import com.example.visitlab.calendario.CalendarioActivity;
 import com.example.visitlab.medicamentos.MedicamentosActivity;
-import com.example.visitlab.ConsultaVisitador.PerfilActivity;
 import com.example.visitlab.promociones.PromocionesActivity;
 import com.example.visitlab.visitas.VisitasActivity;
 
