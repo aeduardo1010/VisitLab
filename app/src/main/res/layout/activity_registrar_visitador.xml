@@ -4,81 +4,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistraVisitador.RegistrarVisitadorActivity">
+    tools:context=".Visitador_Registro.RegistrarVisitadorActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:padding="18dp"
         android:text="REGISTRO DE VISITADOR"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textColor="@color/teal_700"
         android:textStyle="bold"
         android:orientation="vertical"
         android:gravity="center"/>
 
-
-    <EditText
-        android:id="@+id/txtDNI"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:gravity="center"
-        android:hint="Ingrese documento de identidad"
-        android:inputType="phone"
-        android:textSize="18sp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/txtApellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:gravity="center"
-        android:hint="Ingrese apellido"
-        android:inputType="textPersonName"
-        android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:gravity="center"
-        android:hint="Ingrese nombre"
-        android:inputType="textPersonName"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/txtDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="20dp"
+                android:gravity="center"
+                android:hint="Ingrese documento de identidad"
+                android:inputType="phone"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:gravity="center"
-        android:hint="Ingrese su contraseña (8 caracteres)"
-        android:inputType="textPassword"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/txtApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="20dp"
+                android:gravity="center"
+                android:hint="Ingrese apellido"
+                android:inputType="textPersonName"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:padding="20dp"
-        android:gravity="center"
-        android:hint="Ingrese su correo electrónico"
-        android:inputType="textEmailAddress"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="20dp"
+                android:gravity="center"
+                android:hint="Ingrese nombre"
+                android:inputType="textPersonName"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btnGuardarVisitador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:padding="12dp"
-        android:textSize="20sp" />
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="20dp"
+                android:gravity="center"
+                android:hint="Ingrese su contraseña (8 caracteres)"
+                android:inputType="textPassword"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:padding="20dp"
+                android:gravity="center"
+                android:hint="Ingrese su correo electrónico"
+                android:inputType="textEmailAddress"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/tomarSelfie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:text="Agregar foto" />
+                <ImageView
+                    android:id="@+id/selfiePrevia"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/buttonstyle"
+                    tools:src="@tools:sample/avatars"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardarVisitador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:padding="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

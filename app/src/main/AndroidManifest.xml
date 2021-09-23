@@ -3,26 +3,39 @@
     package="com.example.visitlab">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.VisitLab">
+        android:theme="@style/Theme.VisitLab"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".RegistraVisitador.RegistrarVisitadorActivity"
+            android:name=".Visitador_Registro.RegistrarVisitadorActivity"
             android:exported="true" />
         <activity
-            android:name=".MenuVisitador.MenuVisitadorActivity"
+            android:name=".Visitas_Menu.MenuVisitaActivity"
             android:exported="true" />
         <activity
-            android:name=".visitas.VisitasActivity"
+            android:name=".Visitador_Menu.MenuVisitadorActivity"
             android:exported="true" />
         <activity
-            android:name=".ConsultaVisitador.VisitadorActivity"
+            android:name=".Visitas_Agendar.AgendarVisitasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Visitador_Consulta.VisitadorActivity"
             android:exported="true" />
         <activity
             android:name=".medicamentos.MedicamentosActivity"
@@ -51,8 +64,7 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/SplashTheme" >
-
+            android:theme="@style/SplashTheme">
 
 
         </activity>

@@ -1,4 +1,4 @@
-package com.example.visitlab.ConsultaVisitador;
+package com.example.visitlab.Visitador_Consulta;
 
 public class Visitadores {
 

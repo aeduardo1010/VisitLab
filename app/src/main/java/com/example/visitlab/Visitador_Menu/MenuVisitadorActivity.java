@@ -1,4 +1,4 @@
-package com.example.visitlab.MenuVisitador;
+package com.example.visitlab.Visitador_Menu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.visitlab.ConsultaVisitador.VisitadorActivity;
+import com.example.visitlab.Visitador_Consulta.VisitadorActivity;
 import com.example.visitlab.R;
-import com.example.visitlab.RegistraVisitador.RegistrarVisitadorActivity;
+import com.example.visitlab.Visitador_Registro.RegistrarVisitadorActivity;
 
 public class MenuVisitadorActivity extends AppCompatActivity implements View.OnClickListener {
     public CardView MasVisitadorCV,VerVisitadorCV;

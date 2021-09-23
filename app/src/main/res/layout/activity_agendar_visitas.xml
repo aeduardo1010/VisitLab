@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Visitas_Agendar.AgendarVisitasActivity">
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:text="AGENDAR CITA VISITADOR"
+    android:textSize="24sp"
+    android:textColor="@color/teal_700"
+    android:textStyle="bold"
+    android:orientation="vertical"
+    android:gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:hint="Seleccionar Fecha"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/et_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:hint="Seleccionar Hora"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/txtIdVisitador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ingrese ID Cliente"
+        android:inputType="phone"
+        android:padding="20dp"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_fecha"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="FECHA"/>
+
+        <EditText
+            android:id="@+id/edt_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_hora"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="HORA"/>
+
+        <EditText
+            android:id="@+id/edt_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="time"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+    <Button
+    android:id="@+id/btnGuardarVisita"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Guardar"
+    android:padding="12dp"
+    android:textSize="20sp" />
+</LinearLayout>

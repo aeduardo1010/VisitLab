@@ -1,4 +1,4 @@
-package com.example.visitlab.ConsultaVisitador;
+package com.example.visitlab.Visitador_Consulta;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.visitlab.R;
 
 import java.util.ArrayList;
@@ -46,11 +47,13 @@ public class ListaVisitadoresAdapter extends RecyclerView.Adapter<ListaVisitador
         // URL de prueba para cargar imagen
         //String URL2 = "https://www.eventosfilm.com/wp-content/uploads/2018/02/foto-visa-5x5-para-los-Estados-Unidos-300x300.gif";
         //
-/*
-        Glide.with(mCtx)                               // Este Glide no funciona, cuando lo descomento, se cae la App
-                .load(player.getphoto())               // tengo que comentar este bloque para que se pueda mostrar la lista
+
+        Glide.with(mCtx)
+                .load(visitador.getphoto())
+                .centerCrop()
+                //.placeholder(R.drawable.ic_person)
                 .into(holder.imageView);
-*/
+
         holder.txtCodigo.setText(String.valueOf(visitador.getId_codigo()));
         holder.txtDNI.setText(String.valueOf(visitador.getDni()));
         holder.txtApellido.setText(visitador.getApellido());
@@ -103,7 +106,6 @@ public class ListaVisitadoresAdapter extends RecyclerView.Adapter<ListaVisitador
             txtCitasHechas=itemView.findViewById(R.id.num_citas_hechas);
             txtCitasTotal=itemView.findViewById(R.id.num_citas_total);
             imageView=itemView.findViewById(R.id.pic_visitador);
-
         }
     }
 

@@ -7,11 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.visitlab.MenuVisitador.MenuVisitadorActivity;
+import com.example.visitlab.Visitador_Menu.MenuVisitadorActivity;
+import com.example.visitlab.Visitas_Menu.MenuVisitaActivity;
 import com.example.visitlab.calendario.CalendarioActivity;
 import com.example.visitlab.medicamentos.MedicamentosActivity;
 import com.example.visitlab.promociones.PromocionesActivity;
-import com.example.visitlab.visitas.VisitasActivity;
+import com.example.visitlab.Visitas_Agendar.AgendarVisitasActivity;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
@@ -53,7 +54,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         Intent i;
         switch (view.getId()) {
             case R.id.ad_promociones: i  = new Intent(this, PromocionesActivity.class); startActivity(i); break;
-            case R.id.ad_visita: i  = new Intent(this, VisitasActivity.class); startActivity(i); break;
+            case R.id.ad_visita: i  = new Intent(this, MenuVisitaActivity.class); startActivity(i); break;
             case R.id.ad_perfil: i  = new Intent(this, MenuVisitadorActivity.class); startActivity(i); break;
             case R.id.ad_calendario: i  = new Intent(this, CalendarioActivity.class); startActivity(i); break;
             case R.id.ad_medicamentos: i  = new Intent(this, MedicamentosActivity.class); startActivity(i); break;
