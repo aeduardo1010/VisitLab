@@ -51,7 +51,7 @@ public class ListaVisitadoresAdapter extends RecyclerView.Adapter<ListaVisitador
         Glide.with(mCtx)
                 .load(visitador.getphoto())
                 .centerCrop()
-                //.placeholder(R.drawable.ic_person)
+                .placeholder(R.drawable.ic_person)
                 .into(holder.imageView);
 
         holder.txtCodigo.setText(String.valueOf(visitador.getId_codigo()));
@@ -61,6 +61,8 @@ public class ListaVisitadoresAdapter extends RecyclerView.Adapter<ListaVisitador
         holder.txtEmail.setText(visitador.getEmail());
         holder.txtCitasHechas.setText(String.valueOf(visitador.getCitas_hechas()));
         holder.txtCitasTotal.setText(String.valueOf(visitador.getCitas_totales()));
+
+
     }
 
     public void filtrado(final String txtBuscar){
@@ -100,7 +102,7 @@ public class ListaVisitadoresAdapter extends RecyclerView.Adapter<ListaVisitador
 
             txtCodigo=itemView.findViewById(R.id.cod_visitador);
             txtDNI=itemView.findViewById(R.id.num_dni);
-            txtApellido=itemView.findViewById(R.id.ape_visitador);
+                txtApellido=itemView.findViewById(R.id.ape_visitador);
             txtNombre=itemView.findViewById(R.id.nom_visitador);
             txtEmail=itemView.findViewById(R.id.mail_visitador);
             txtCitasHechas=itemView.findViewById(R.id.num_citas_hechas);

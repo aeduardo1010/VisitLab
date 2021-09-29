@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayLabs">
+        <item>Seleccione un laboratorio</item>
+        <item>SUIZALAB</item>
+        <item>BAYER</item>
+        <item>GSK</item>
+        <item>EUROLAB</item>
+        <item>GRUNENTHAL</item>
+        <item>ABB</item>
+        <item>BOEHRINGER INGELHEIM</item>
+        <item>ECAR</item>
+        <item>EUROFARMA</item>
+        <item>GARDEN HOUSE</item>
+        <item>WERMAR</item>
+        <item>ASOFARMA</item>
+    </string-array>
+</resources>

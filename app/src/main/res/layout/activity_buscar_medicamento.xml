@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#C3E8E5"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:id="@+id/pic_medicamento"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttonstyle" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:text="NOMBRE"
+                android:textStyle="bold"
+                android:textColor="#031CA7"/>
+            <TextView
+                android:id="@+id/tv_nom_medic"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                android:textColor="#0278bb"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:text="LABORATORIO"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textColor="#031CA7"/>
+            <TextView
+                android:id="@+id/tv_laboratorio"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                android:textColor="#0278bb"
+                android:layout_below="@id/tv_nom_medic"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:text="ESPECIALIDAD"
+                android:textStyle="bold"
+                android:layout_marginTop="80dp"
+                android:textColor="#031CA7"/>
+            <TextView
+                android:id="@+id/tv_especialidad"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                android:textColor="#0278bb"
+                android:layout_below="@id/tv_laboratorio"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

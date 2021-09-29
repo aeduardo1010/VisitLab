@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.visitlab.Visitas_Agendar.AgendarVisitasActivity;
 import com.example.visitlab.R;
+import com.example.visitlab.Visitas_Finalizar.TerminarVisitasActivity;
 
 public class MenuVisitaActivity extends AppCompatActivity implements View.OnClickListener{
     public CardView AgendaCitaCV,FinalizaCitaCV;
@@ -33,7 +34,7 @@ public class MenuVisitaActivity extends AppCompatActivity implements View.OnClic
         Intent i;
         switch (view.getId()) {
             case R.id.ad_agendacita: i  = new Intent(this, AgendarVisitasActivity.class); startActivity(i); break;
-            //case R.id.ad_finalizacita: i  = new Intent(this, VisitadorActivity.class); startActivity(i); break;
+            case R.id.ad_finalizacita: i  = new Intent(this, TerminarVisitasActivity.class); startActivity(i); break;
             default:break;
         }
     }

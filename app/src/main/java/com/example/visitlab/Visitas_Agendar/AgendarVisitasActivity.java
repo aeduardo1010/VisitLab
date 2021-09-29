@@ -15,45 +15,45 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.visitlab.R;
 
 import java.sql.Date;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
-//public class AgendarVisitasActivity extends AppCompatActivity implements View.OnClickListener {
 public class AgendarVisitasActivity extends AppCompatActivity {
-//===============================================================
-/*
-    Button bt_fecha;
-    EditText edt_fecha;
-    Button bt_hora;
-    EditText edt_hora;
-    private int dia, mes, ano, hora, minutos;
-*/
-//===============================================================
+
     EditText etDate;
     EditText etHour;
+    EditText etCodCli, etCodVisitador;
+    Button btnAgregar;
     DatePickerDialog.OnDateSetListener setListener;
-
-//===============================================================
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar_visitas);
 
-//===============================================================
-/*
-        bt_fecha=(Button)findViewById(R.id.bt_fecha);
-        edt_fecha=(EditText)findViewById(R.id.edt_fecha);
-        bt_hora=(Button)findViewById(R.id.bt_hora);
-        edt_hora=(EditText)findViewById(R.id.edt_hora);
+        btnAgregar=(Button)findViewById(R.id.btnGuardarVisita);
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ejecutarServicio("http://192.168.1.11:8080/visitlabperu/agendar_visita.php");
+            }
+        });
 
-        bt_hora.setOnClickListener(this);
-        bt_fecha.setOnClickListener(this);
-*/
-//================================================================
+        etCodCli=findViewById(R.id.txtIdCliente);
+        etCodVisitador=findViewById(R.id.txtIdVisitador);
         etDate=findViewById(R.id.et_date);
         etHour=findViewById(R.id.et_hour);
         Calendar calendar = Calendar.getInstance();
@@ -71,7 +71,8 @@ public class AgendarVisitasActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int day) {
                         month=month+1;
-                        String date=day+"/"+month+"/"+year;
+                        //String date=day+"/"+month+"/"+year;
+                        String date=year+"/"+month+"/"+day;
                         etDate.setText(date);
                     }
                 },year,month,day);
@@ -94,44 +95,38 @@ public class AgendarVisitasActivity extends AppCompatActivity {
             }
         });
 
-//================================================================
     }
-//================================================================
-/*
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    @Override
-    public void onClick(View v) {
 
-        if(v==bt_fecha){
-            final Calendar c=Calendar.getInstance();
-            dia=c.get(Calendar.DAY_OF_MONTH);
-            mes=c.get(Calendar.MONTH);
-            ano=c.get(Calendar.YEAR);
-
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    edt_fecha.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
-                }
-            },dia,mes,ano);
-            datePickerDialog.show();
+    private void ejecutarServicio(String URL){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(getApplicationContext(),"Operación exitosa", Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"=========> Error", Toast.LENGTH_SHORT).show();
+            }
         }
 
-
-        if(v==bt_hora){
-            final Calendar c =Calendar.getInstance();
-            hora=c.get(Calendar.HOUR_OF_DAY);
-            minutos=c.get(Calendar.MINUTE);
-
-            TimePickerDialog timePickerDialog=new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
-                @Override
-                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    edt_hora.setText(hourOfDay+":"+minute);
-                }
-            },hora,minutos,false);
-            timePickerDialog.show();
-        }
+        ){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros=new HashMap<String, String>();
+                parametros.put("cita_id_visita"," ");
+                parametros.put("cita_fecha",etDate.getText().toString());
+                parametros.put("cita_hora",etHour.getText().toString());
+                parametros.put("cita_id_cliente",etCodCli.getText().toString());
+                parametros.put("cita_id_visitador",etCodVisitador.getText().toString());
+                parametros.put("cita_estado","0");
+                parametros.put("cita_pos_x","0");
+                parametros.put("cita_pos_y","0");
+                return parametros;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
-*/
-//================================================================
 }

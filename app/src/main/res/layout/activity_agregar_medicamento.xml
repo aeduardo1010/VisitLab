@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".medicamentos.AgregarMedicamentoActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="REGISTRO DE MEDICAMENTO"
+        android:textSize="24sp"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:orientation="vertical"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/txtMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="20dp"
+        android:gravity="left"
+        android:hint="Ingrese nombre del medicamento"
+        android:inputType="text"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/idSpinnerLabs"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/idSpinnerEspec"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/tomarSelfie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text="Agregar foto" />
+        <ImageView
+            android:id="@+id/selfiePrevia"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/buttonstyle"
+            tools:src="@tools:sample/avatars"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGuardarMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Guardar"
+        android:textSize="20dp" />
+</LinearLayout>

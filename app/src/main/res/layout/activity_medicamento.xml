@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".promociones.PromocionesActivity">
+    tools:context=".medicamentos.BuscarMedicamentoActivity">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/txtBuscar"
+        android:id="@+id/txtBuscarMedicamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:queryHint="Buscar por Descripción"
+        app:queryHint="Buscar medicamento"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listapromociones"
+        android:id="@+id/listaMedicamentos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="5dp"
@@ -27,7 +26,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/txtBuscarMedicamento"
         app:layout_constraintVertical_bias="0.0"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

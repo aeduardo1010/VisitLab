@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayEspec">
+        <item>Seleccione una especialidad</item>
+        <item>PEDIATRIA</item>
+        <item>MEDICINA GENERAL</item>
+        <item>GENERAL</item>
+        <item>GASTRO</item>
+        <item>NEUMOLOGIA</item>
+    </string-array>
+</resources>

@@ -1,11 +1,16 @@
 package com.example.visitlab.Visitador_Consulta;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.volley.Request;
 import com.example.visitlab.R;
 
+import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.SearchView;
@@ -18,19 +23,25 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.visitlab.Visitas_Agendar.AgendarVisitasActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class VisitadorActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+
+public class VisitadorActivity extends AppCompatActivity
+//        implements SearchView.OnQueryTextListener, View.OnClickListener{
+        implements SearchView.OnQueryTextListener{
+
     private static final String URL_Visitadores = "http://192.168.1.11:8080/visitlabperu/consultar_visitador.php";
-    //private static final String URL_Visitadores = "http://10.0.2.2/consultar_visitador.php";
     private List<Visitadores> visitadoresList;
     private RecyclerView rv_listaVisitadores;
     private SearchView txtBuscar;
 
     ListaVisitadoresAdapter adapter;
+
+    Button bt_tomarphoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +60,23 @@ public class VisitadorActivity extends AppCompatActivity implements SearchView.O
 
             loadvisitadores();
 
-            txtBuscar.setOnQueryTextListener(this);   // debido a esto se cae la pantalla al querer sar el SearchView !!!!!!!!!!!!!!!!!
+            txtBuscar.setOnQueryTextListener(this);   // debido a esto se cae la pantalla al querer usar el SearchView !!!!!!!!!!!!!!!!!
+/*
+            bt_tomarphoto=(Button)findViewById(R.id.bt_photo);
+            bt_tomarphoto.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(VisitadorActivity.this, TomarFotoVisitadorActivity.class);startActivity(i);
+                }
+            });
+*/
         }
         catch (Exception e){
             e.printStackTrace();
         }
-
-
-
     }
+
 
     private void loadvisitadores(){
         Toast.makeText(this,"Lista de Visitadores",Toast.LENGTH_SHORT).show();
@@ -110,4 +129,13 @@ public class VisitadorActivity extends AppCompatActivity implements SearchView.O
         adapter.filtrado(s);
         return false;
     }
+/*
+    public void onClick(@NonNull View view) {
+        Intent i;
+        switch (view.getId()) {
+            case R.id.bt_photo: i  = new Intent(this, TomarFotoVisitadorActivity.class); startActivity(i); break;
+            default:break;
+        }
+    }
+*/
 }

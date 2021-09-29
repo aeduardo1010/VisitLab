@@ -1,4 +1,4 @@
-package com.example.visitlab.promociones;
+package com.example.visitlab.ubicaciones;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -22,43 +22,45 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PromocionesActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
-    private static final String URL_Promociones = "http://192.168.1.11:8080/visitlabperu/consultar_promocion.php";
+public class UbicacionesActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+    private static final String URL_Ubicaciones = "http://192.168.1.11:8080/visitlabperu/consultar_ubicacion.php";
 
-    private List<Promociones> promocionesList;
-    private RecyclerView rv_listaPromocion;
+    private List<Ubicaciones> ubicacionesList;
+    private RecyclerView rv_listaUbicacion;
     private SearchView txtBuscar;
 
-    ListaPromocionesAdapter adapter;
+    ListaUbicacionesAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_promociones);
+        setContentView(R.layout.activity_ubicaciones);
 
         try {
 
             txtBuscar = findViewById(R.id.txtBuscar);
 
-            rv_listaPromocion = (RecyclerView)findViewById(R.id.listapromociones);
-            rv_listaPromocion.setHasFixedSize(true);
-            rv_listaPromocion.setLayoutManager(new LinearLayoutManager(this));
+            rv_listaUbicacion = (RecyclerView)findViewById(R.id.listaubicaciones);
+            rv_listaUbicacion.setHasFixedSize(true);
+            rv_listaUbicacion.setLayoutManager(new LinearLayoutManager(this));
 
-            promocionesList = new ArrayList<>();
+            ubicacionesList = new ArrayList<>();
 
-            loadPromocion();
+           loadUbicacion();
 
-            txtBuscar.setOnQueryTextListener(this);
+            txtBuscar.setOnQueryTextListener(this);   // debido a esto se cae la pantalla al querer sar el SearchView !!!!!!!!!!!!!!!!!
         }
         catch (Exception e){
             e.printStackTrace();
         }
 
+
+
     }
 
-    private void loadPromocion(){
-        Toast.makeText(this,"Lista de Promociones",Toast.LENGTH_SHORT).show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_Promociones,
+    private void loadUbicacion(){
+        Toast.makeText(this,"Lista de Ubicaciones",Toast.LENGTH_SHORT).show();
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_Ubicaciones,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -66,16 +68,19 @@ public class PromocionesActivity extends AppCompatActivity implements SearchView
                             JSONArray array = new JSONArray(response);
                             for (int i = 0; i < array.length(); i++) {
 
-                                JSONObject promociones = array.getJSONObject(i);
+                                JSONObject ubicaciones = array.getJSONObject(i);
 
-                                promocionesList.add(new Promociones(
-                                        promociones.getInt("P_id_promocion"),
-                                        promociones.getString("P_descripcion"),
-                                        promociones.getString("P_photo")
+                                ubicacionesList.add(new Ubicaciones(
+                                        ubicaciones.getInt("UV_ID_Visitador"),
+                                        ubicaciones.getInt("UV_ID_Ubicacion"),
+                                        ubicaciones.getString("UV_X"),
+                                        ubicaciones.getString("UV_Y"),
+                                        ubicaciones.getString("UV_Fecha"),
+                                        ubicaciones.getString("UV_Hora")
                                 ));
                             }
-                            adapter = new ListaPromocionesAdapter(PromocionesActivity.this, promocionesList);
-                            rv_listaPromocion.setAdapter(adapter);
+                            adapter = new ListaUbicacionesAdapter(UbicacionesActivity.this, ubicacionesList);
+                            rv_listaUbicacion.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

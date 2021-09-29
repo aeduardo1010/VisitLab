@@ -45,8 +45,6 @@ import java.io.ByteArrayOutputStream;
 //================================================================================================== Cambio foto FIN
 
 
-
-
 public class RegistrarVisitadorActivity extends AppCompatActivity {
     EditText edtCodigo, edtDNI, edtApellido, edtNombre, edtPassword, edtEmail;
     Button btnAgregar;
