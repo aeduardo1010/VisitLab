@@ -62,7 +62,18 @@
         <activity
             android:name=".medicamentos.MenuMedicamentosActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".medicamentos.ListaMedicamentoAdapter"
+            android:exported="true" />
+        <activity
+            android:name=".medicamentos.AgregarMedicamentoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".medicamentos.BuscarMedicamentoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".medicamentos.Medicamento"
+            android:exported="true" />
 
         <activity
             android:name=".Home"
