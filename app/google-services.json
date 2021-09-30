@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "992370577845",
+    "project_id": "visitlab",
+    "storage_bucket": "visitlab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992370577845:android:b845e0631ee22e86ac09fc",
+        "android_client_info": {
+          "package_name": "com.example.visitlab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992370577845-bhgl54qf2tt3fn0gakcdudcrvat6mj4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.visitlab",
+            "certificate_hash": "6fb952520a3382894ec782e6db8a8e3e7424583a"
+          }
+        },
+        {
+          "client_id": "992370577845-fpq2ketrq70u3tevra0j8r1duml6mrvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMfY5BF3OoVap_3M6S1hJnYR7YzN-1hzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992370577845-fpq2ketrq70u3tevra0j8r1duml6mrvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -65,7 +65,36 @@ public class TerminarVisitasActivity extends AppCompatActivity {
 
             }
         });
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String update = "http://192.168.1.11:8080/visitlabperu/finalizar_cita.php?idr="+etCodVisita.getText();
+                FinalizarCita(update);
+            }
+        });
     }
+
+    public void FinalizarCita(String URL){
+        Toast.makeText(getApplicationContext(), ""+URL, Toast.LENGTH_SHORT).show();
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(getApplicationContext(),"Operación exitosa", Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"=========> Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        queue.add(stringRequest);
+
+    }
+
 
     public void EnviarRecibirDatos(String URL){
 
