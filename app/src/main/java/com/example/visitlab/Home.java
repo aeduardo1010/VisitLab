@@ -12,12 +12,13 @@ import com.example.visitlab.Visitas_Menu.MenuVisitaActivity;
 import com.example.visitlab.calendario.CalendarioActivity;
 import com.example.visitlab.medicamentos.MedicamentosActivity;
 import com.example.visitlab.medicamentos.MenuMedicamentosActivity;
+import com.example.visitlab.preorden.MenuPreOrdenActivity;
 import com.example.visitlab.promociones.PromocionesActivity;
 import com.example.visitlab.ubicaciones.UbicacionesActivity;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
-    private CardView CalendarioCV,PerfilCV, VisitaCV, MedicamentosCV, PromocionesCV, LocalizacionCV; // MasVisitadorCV,VerVisitadorCV;
+    private CardView CalendarioCV,PerfilCV, VisitaCV, MedicamentosCV, PromocionesCV, LocalizacionCV, PreOrdenCV; // MasVisitadorCV,VerVisitadorCV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         MedicamentosCV=(CardView) findViewById(R.id.ad_medicamentos);
         PromocionesCV=(CardView) findViewById(R.id.ad_promociones);
         LocalizacionCV=(CardView) findViewById(R.id.ad_localizacíón);
+        PreOrdenCV=(CardView) findViewById(R.id.ad_preordenmenu);
+
 
      //   MasVisitadorCV=(CardView) findViewById(R.id.ad_calendario);
      //   VerVisitadorCV=(CardView) findViewById(R.id.ad_perfil);
@@ -43,6 +46,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         MedicamentosCV.setOnClickListener(this);
         PromocionesCV.setOnClickListener(this);
         LocalizacionCV.setOnClickListener(this);
+        PreOrdenCV.setOnClickListener(this);
 
      //   MasVisitadorCV.setOnClickListener(this);
      //   VerVisitadorCV.setOnClickListener(this);
@@ -60,6 +64,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
             case R.id.ad_calendario: i  = new Intent(this, CalendarioActivity.class); startActivity(i); break;
             case R.id.ad_medicamentos: i  = new Intent(this, MenuMedicamentosActivity.class); startActivity(i); break;
             case R.id.ad_localizacíón: i  = new Intent(this, UbicacionesActivity.class); startActivity(i); break;
+            case R.id.ad_preordenmenu: i  = new Intent(this, MenuPreOrdenActivity.class); startActivity(i); break;
          //   case R.id.ad_masvisitador: i  = new Intent(this, PerfilActivity.class); startActivity(i); break;
         //    case R.id.ad_vervisitador: i  = new Intent(this, VisitasActivity.class); startActivity(i); break;
             default:break;

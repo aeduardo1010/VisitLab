@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayTipoVisita">
+        <item>Seleccione tipo de Visita</item>
+        <item>PRESENTACIÓN</item>
+        <item>VENTAS</item>
+        <item>CAPACITACIÓN</item>
+    </string-array>
+</resources>

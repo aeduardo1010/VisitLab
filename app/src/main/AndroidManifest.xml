@@ -24,6 +24,12 @@
         android:theme="@style/Theme.VisitLab"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".preorden.MenuPreOrdenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".preorden.RegistroPreOrdenActivity"
+            android:exported="true" />
+        <activity
             android:name=".Visitas_Finalizar.TerminarVisitasActivity"
             android:exported="true" />
         <activity
@@ -74,7 +80,6 @@
         <activity
             android:name=".medicamentos.Medicamento"
             android:exported="true" />
-
         <activity
             android:name=".Home"
             android:exported="true">
@@ -88,10 +93,10 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/SplashTheme"></activity>
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".Sesion.InicioSesionActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

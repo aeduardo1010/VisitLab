@@ -56,6 +56,17 @@
         <entry key="..\:/Users/EDUARDO/Documents/UPC/2021-2/Modulo A/Desarrollo plataformas moviles - E61A/Proyecto/VisitLab/app/src/main/res/layout/list_layout_visitador.xml" value="1.1636904761904763" />
         <entry key="..\:/Users/EDUARDO/Documents/UPC/2021-2/Modulo A/Desarrollo plataformas moviles - E61A/Proyecto/VisitLab/app/src/main/res/layout/medicamento_desc.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/EDUARDO/Documents/UPC/2021-2/Modulo A/Desarrollo plataformas moviles - E61A/Proyecto/VisitLab/app/src/main/res/layout/visitador_fila.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/fco/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.36770833333333336" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/drawable/circlebackgroundblue1.xml" value="0.38385416666666666" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/drawable/squaregroundblue_1.xml" value="0.38385416666666666" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_agregar_medicamento.xml" value="0.33" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_buscar_medicamento.xml" value="0.18115942028985507" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_home.xml" value="0.3183876811594203" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_medicamento.xml" value="0.20199275362318841" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_menu_medicamentos.xml" value="0.33" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_menu_pre_orden.xml" value="0.36770833333333336" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_pre_orden.xml" value="0.20520833333333333" />
+        <entry key="..\:/wks_as/VisitLab/app/src/main/res/layout/activity_registro_pre_orden.xml" value="0.36770833333333336" />
       </map>
     </option>
   </component>
