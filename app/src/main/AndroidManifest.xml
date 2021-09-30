@@ -69,18 +69,18 @@
             android:name=".medicamentos.MenuMedicamentosActivity"
             android:exported="true" />
         <activity
-            android:name=".medicamentos.ListaMedicamentoAdapter"
-            android:exported="true" />
-        <activity
             android:name=".medicamentos.AgregarMedicamentoActivity"
             android:exported="true" />
         <activity
             android:name=".medicamentos.BuscarMedicamentoActivity"
             android:exported="true" />
         <activity
+<<<<<<< HEAD
             android:name=".medicamentos.Medicamento"
             android:exported="true" />
         <activity
+=======
+>>>>>>> 7cada0691c54a84d5fc78527c8e8ae6d027d693a
             android:name=".Home"
             android:exported="true">
             <intent-filter>
@@ -97,6 +97,17 @@
         <activity
             android:name=".Sesion.InicioSesionActivity"
             android:exported="true" />
+<<<<<<< HEAD
+=======
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value=" AIzaSyBMfY5BF3OoVap_3M6S1hJnYR7YzN-1hzo" />
+
+>>>>>>> 7cada0691c54a84d5fc78527c8e8ae6d027d693a
     </application>
 
 </manifest>
