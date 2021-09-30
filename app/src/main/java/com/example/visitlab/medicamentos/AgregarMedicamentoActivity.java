@@ -100,7 +100,7 @@ public class AgregarMedicamentoActivity extends AppCompatActivity {
         btnGuardarMedicamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ejecutarServicioMedicamento("http://192.168.0.104/visitlabperu/insertar_medicamento.php");
+                ejecutarServicioMedicamento("http://192.168.1.11:8080/visitlabperu/insertar_medicamento.php");
             }
         });
     }

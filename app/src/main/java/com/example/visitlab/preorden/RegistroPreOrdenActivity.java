@@ -49,7 +49,7 @@ public class RegistroPreOrdenActivity extends AppCompatActivity {
         btnGuardarPre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ejecutarServicioPO("http://192.168.0.104/visitlabperu/insertar_preorden.php");
+                ejecutarServicioPO("http://192.168.1.11:8080/visitlabperu/insertar_preorden.php");
             }
         });
     }

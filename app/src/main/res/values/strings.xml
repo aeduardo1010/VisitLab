@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Visit Lab</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Ingresar usuario o email</string>
+    <string name="prompt_email">Ingresar ID Visitador</string>
     <string name="prompt_password">Ingresar contraseña</string>
     <string name="action_sign_in">ENTRAR</string>
     <string name="action_sign_in_short">Sign in</string>

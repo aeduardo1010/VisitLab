@@ -24,7 +24,7 @@ import java.util.List;
 
 public class BuscarMedicamentoActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
-    private static final String URL_BuscarMedicamento = "http://192.168.0.104/visitlabperu/consultar_medicamento.php";
+    private static final String URL_BuscarMedicamento = "http://192.168.1.11:8080/visitlabperu/consultar_medicamento.php";
     private List<Medicamento> listaMedicamento;
     private RecyclerView rvListaMedicamento;
     private SearchView txtBuscarMedicamento;
